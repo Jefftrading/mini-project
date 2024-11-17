@@ -34,8 +34,52 @@
         <a href="./shop.html " class="cta-btn">Shop Now</a>
     </div>
 </header>
-  
+<div class="container">
+  <!-- Signup & Login Forms -->
+  <div class="form-container">
+      <!-- Signup Form -->
+      <div id="signupForm">
+          <h2>Create an Account</h2>
+          <form id="signup" onsubmit="return handleSignup(event)">
+              <div class="input-group">
+                  <label for="signupFullName">Full Name</label>
+                  <input type="text" id="signupFullName" required>
+              </div>
+              <div class="input-group">
+                  <label for="signupEmail">Email</label>
+                  <input type="email" id="signupEmail" required>
+              </div>
+              <div class="input-group">
+                  <label for="signupPassword">Password</label>
+                  <input type="password" id="signupPassword" required>
+              </div>
+              <div class="input-group">
+                  <label for="signupConfirmPassword">Confirm Password</label>
+                  <input type="password" id="signupConfirmPassword" required>
+              </div>
+              <button type="submit">Sign Up</button>
+              <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login here</a></p>
+          </form>
+      </div>
 
+      <!-- Login Form -->
+      <div id="loginForm" style="display: none;">
+          <h2>Login</h2>
+          <form id="login" onsubmit="return handleLogin(event)">
+              <div class="input-group">
+                  <label for="loginEmail">Email</label>
+                  <input type="email" id="loginEmail" required>
+              </div>
+              <div class="input-group">
+                  <label for="loginPassword">Password</label>
+                  <input type="password" id="loginPassword" required>
+              </div>
+              <button type="submit">Login</button>
+              <p>Don't have an account? <a href="#" onclick="toggleForm('signup')">Sign up here</a></p>
+          </form>
+      </div>
+  </div>
+</div>
   <footer>
     <p>&copy; 2024 Jewelry Shop. All Rights Reserved.</p>
 </footer>
